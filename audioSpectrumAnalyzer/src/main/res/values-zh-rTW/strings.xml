@@ -26,7 +26,6 @@
     <string name="et_db_setting_upper_bound">分貝上限</string>
     <string name="show_range_lock">鎖定範圍</string>
     <string name="textview_RMS_text">均方根:dB \n-XXX.X</string>
-    <string name="app_name">音頻頻譜分析器</string>
     <string name="set_cursor_freq_hint">頻率 [Hz]</string>
     <string name="menu_manual">使用幫助</string>
     <string name="menu_preferences">偏好設定</string>

@@ -40,6 +40,7 @@ import android.os.SystemClock;
 import androidx.preference.PreferenceManager;
 import android.util.Log;
 import android.view.GestureDetector;
+import android.view.HapticFeedbackConstants;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
@@ -84,7 +85,6 @@ public class AnalyzerActivity extends AppCompatActivity implements AnalyzerGraph
     double maxAmpFreq;
     double[] viewRangeArray = null;
 
-    private boolean isMeasure = false;
     private boolean isLockViewRange = false;
     volatile boolean bSaveWav = false;
     volatile boolean isPaused = false;
@@ -534,16 +534,13 @@ public class AnalyzerActivity extends AppCompatActivity implements AnalyzerGraph
         }
     }
 
+    // With the view range locked there is nothing to pan, so a one-finger drag anywhere moves the cursor.
     void stickToMeasureMode() {
         isLockViewRange = true;
-        switchMeasureAndScaleMode();  // Force set to Measure mode
     }
 
     void stickToMeasureModeCancel() {
         isLockViewRange = false;
-        if (isMeasure) {
-            switchMeasureAndScaleMode();  // Force set to ScaleMode
-        }
     }
 
     private boolean isInGraphView(float x, float y) {
@@ -574,19 +571,27 @@ public class AnalyzerActivity extends AppCompatActivity implements AnalyzerGraph
             return true;
         }
 
+        // Long press toggles the cursor. A newly placed cursor stays grabbed, so the same
+        // finger can keep going and drag it without lifting.
         @Override
         public void onLongPress(MotionEvent event) {
-            if (isInGraphView(event.getX(0), event.getY(0))) {
-                if (!isMeasure) {  // go from "scale" mode to "cursor" mode
-                    switchMeasureAndScaleMode();
-                }
+            if (isDraggingDivider || !isInGraphView(event.getX(0), event.getY(0))) return;
+            AnalyzerGraphic graphView = analyzerViews.graphView;
+            if (graphView.hasCursor()) {
+                graphView.hideCursor();
+                isDraggingCursor = false;
+            } else {
+                graphView.setCursor(event.getX(0), event.getY(0));
+                cursorGrabDx = 0;
+                isDraggingCursor = true;
             }
-            measureEvent(event);  // force insert this event
+            graphView.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS);
+            analyzerViews.invalidateGraphView();
         }
 
         @Override
         public boolean onDoubleTap(MotionEvent event) {
-            if (!isMeasure) {
+            if (!isDraggingCursor) {
                 scaleEvent(event);            // ends scale mode
                 analyzerViews.graphView.resetViewScale();
             }
@@ -596,8 +601,7 @@ public class AnalyzerActivity extends AppCompatActivity implements AnalyzerGraph
         @Override
         public boolean onFling(MotionEvent event1, MotionEvent event2,
                                float velocityX, float velocityY) {
-            if (isMeasure) {
-                // seems never reach here...
+            if (isDraggingCursor) {
                 return true;
             }
             // Fly the canvas in graphView when in scale mode
@@ -639,23 +643,21 @@ public class AnalyzerActivity extends AppCompatActivity implements AnalyzerGraph
         };
     }
 
-    private void switchMeasureAndScaleMode() {
-        if (isLockViewRange) {
-            isMeasure = true;
-            return;
-        }
-        isMeasure = !isMeasure;
-    }
-
     private boolean isDraggingDivider = false;
+    private boolean isDraggingCursor = false;
+    private float cursorGrabDx = 0;   // cursor line x minus finger x, so a grabbed cursor doesn't jump
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         AnalyzerGraphic graphView = analyzerViews.graphView;
         boolean inGraph = isInGraphView(event.getX(0), event.getY(0));  // also updates windowLocation
+        float viewX = event.getX(0) - windowLocation[0];
         float viewY = event.getY(0) - windowLocation[1];
         if (event.getActionMasked() == MotionEvent.ACTION_DOWN) {
             isDraggingDivider = inGraph && graphView.isOnDivider(viewY);
+            isDraggingCursor = !isDraggingDivider && inGraph && graphView.hasCursor()
+                    && (isLockViewRange || graphView.isNearCursor(viewX));
+            cursorGrabDx = isDraggingCursor && !isLockViewRange ? graphView.cursorPixelX() - viewX : 0;
             graphView.beginGesture(viewY);
         }
         if (isDraggingDivider) {
@@ -670,40 +672,24 @@ public class AnalyzerActivity extends AppCompatActivity implements AnalyzerGraph
         }
         if (inGraph) {
             this.mDetector.onTouchEvent(event);
-            if (isMeasure) {
-                measureEvent(event);
-            } else {
+            // A second finger turns a cursor drag into a pinch, unless the view range is locked.
+            if (isDraggingCursor && event.getPointerCount() > 1 && !isLockViewRange) {
+                isDraggingCursor = false;
+            }
+            if (isDraggingCursor) {
+                if (event.getPointerCount() == 1) {
+                    graphView.setCursor(event.getX(0) + cursorGrabDx, event.getY(0));
+                }
+            } else if (!isLockViewRange) {
                 scaleEvent(event);
             }
             analyzerViews.invalidateGraphView();
-            // Go to scaling mode when user release finger in measure mode.
-            if (event.getActionMasked() == MotionEvent.ACTION_UP) {
-                if (isMeasure) {
-                    switchMeasureAndScaleMode();
-                }
-            }
-        } else {
-            // When finger is outside the plot, go to scaling mode.
-            if (isMeasure) {
-                switchMeasureAndScaleMode();
-            }
+        }
+        int action = event.getActionMasked();
+        if (action == MotionEvent.ACTION_UP || action == MotionEvent.ACTION_CANCEL) {
+            isDraggingCursor = false;
         }
         return super.onTouchEvent(event);
-    }
-
-    /**
-     *  Manage cursor for measurement
-     */
-    private void measureEvent(MotionEvent event) {
-        switch (event.getPointerCount()) {
-            case 1:
-                analyzerViews.graphView.setCursor(event.getX(), event.getY());
-                break;
-            case 2:
-                if (isInGraphView(event.getX(1), event.getY(1))) {
-                    switchMeasureAndScaleMode();
-                }
-        }
     }
 
     /**

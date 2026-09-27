@@ -1,12 +1,12 @@
-# Audio Spectrum Analyzer for Android
+# aa4a
 
-A real-time audio spectrum analyzer and scrolling waterfall (spectrogram) for Android.
-Tune an instrument, look at a voice, find the hum in a room, or watch what a
-microphone actually hears.
+**aa4a** (Audio Analyzer for Android) is a real-time audio spectrum analyzer and
+scrolling waterfall (spectrogram) for Android. Tune an instrument, look at a
+voice, find the hum in a room, or watch what a microphone actually hears.
 
 <img src="docs/screenshots/both.jpg" width="250"/> <img src="docs/screenshots/waterfall.jpg" width="250"/> <img src="docs/screenshots/fft-picker.jpg" width="250"/>
 
-This is a fork of [woheller69/audio-analyzer-for-android](https://github.com/woheller69/audio-analyzer-for-android).
+aa4a is a fork of [woheller69/audio-analyzer-for-android](https://github.com/woheller69/audio-analyzer-for-android).
 It keeps the analysis engine and rebuilds the display: the waterfall scrolls
 smoothly at the screen's refresh rate, the most-used analysis options are on the
 main screen, and the waterfall can fill the whole screen.
@@ -29,8 +29,9 @@ Google's 2026/2027 developer-verification requirement.
   waterfall color range (with Auto), frequency scale, sample rate, window
   function, averaging, history length, palette, dB/dBA weighting, and cursor.
 * **Frequency axis:** linear, logarithmic, or labelled by musical note.
-* **Cursor:** long-press a plot to place a cursor across both plots, or set
-  its frequency exactly from the Cursor button.
+* **Cursor:** long-press a plot to place a cursor across both plots, drag
+  the cursor line to move it, and long-press again to remove it. The Cursor
+  button sets its frequency exactly.
 * **Gestures:** pinch to zoom, drag to pan, double-tap to reset. Frequency
   zoom is shared by the spectrum and the waterfall.
 * **Peak readout:** peak frequency with interpolation, as Hz and as a note.
@@ -58,8 +59,9 @@ adb install audioSpectrumAnalyzer/build/outputs/apk/debug/audioSpectrumAnalyzer-
 ```
 
 The app ID is `org.xeyes.aa4a`, so it installs alongside the upstream app
-rather than replacing it. Debug builds add a `.dev` suffix, so a debug build
-and a release build can be installed at the same time.
+rather than replacing it. Debug builds add a `.dev` suffix and show up as
+"aa4a dev" with a DEV badge on the icon, so a debug build and a release build
+can be installed at the same time.
 
 ## Permissions
 
@@ -126,7 +128,7 @@ every frame, so it keeps scrolling between spectra.
 
 ## Lineage and acknowledgements
 
-This app is the latest branch of a long line of work, and most of what it does
+aa4a is the latest branch of a long line of work, and most of what it does
 was inherited.
 
 ### Direct lineage

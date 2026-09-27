@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="preferences">Tercihler</string>
-    <string name="app_name">Ses Spektrumu Analizörü</string>
     <string name="textview_RMS_text">RMS:dB \n-XXX.X</string>
     <string name="textview_rec_text">Kayıt: 00:00:00.0, Kalan: 0000:00:00</string>
     <string name="text_rec">Kayıt:</string>

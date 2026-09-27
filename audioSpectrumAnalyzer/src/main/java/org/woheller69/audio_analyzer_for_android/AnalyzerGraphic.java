@@ -393,6 +393,20 @@ public class AnalyzerGraphic extends View {
         invalidate();
     }
 
+    boolean hasCursor() {
+        return cursorFreq > 0;
+    }
+
+    /** Horizontal position of the cursor line in view coordinates. */
+    float cursorPixelX() {
+        return (float) spectrumPlot.axisX.pixelFromV(cursorFreq);
+    }
+
+    /** True if x (view coordinates) is close enough to the cursor line to grab it. */
+    boolean isNearCursor(float x) {
+        return hasCursor() && Math.abs(x - cursorPixelX()) < 24 * dpRatio;
+    }
+
     // ---- gestures ----
 
     /** Call at the start of a gesture; y in view coordinates. */

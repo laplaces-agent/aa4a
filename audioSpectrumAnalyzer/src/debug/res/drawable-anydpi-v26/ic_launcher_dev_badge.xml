@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- "DEV" pill for the debug launcher icon, kept inside the adaptive icon's 66dp safe zone.
+     The letters are holes in the pill (evenOdd), so the badge also reads as a single-color
+     themed icon; the dark pill underneath fills them in for the full-color icon. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="#1B1F3A"
+        android:pathData="M42.5,68 H64.5 A7,7 0 0 1 64.5,82 H42.5 A7,7 0 0 1 42.5,68 Z" />
+    <path
+        android:fillColor="#FFA000"
+        android:fillType="evenOdd"
+        android:pathData="M42.5,68 H64.5 A7,7 0 0 1 64.5,82 H42.5 A7,7 0 0 1 42.5,68 Z
+            M42,71 H45 A3.5,4 0 0 1 45,79 H42 Z
+            M43.8,72.8 H45 A1.7,2.2 0 0 1 45,77.2 H43.8 Z
+            M51,71 H56 V72.8 H52.8 V74.1 H55.2 V75.9 H52.8 V77.2 H56 V79 H51 Z
+            M58,71 H59.9 L61.5,76.2 L63.1,71 H65 L62.4,79 H60.6 Z" />
+</vector>
