@@ -1,118 +1,200 @@
- ```
-Google has announced that, starting in 2026/2027, all apps on certified Android devices
-will require the developer to submit personal identity details directly to Google.
-Since the developers of this app do not agree to this requirement, this app will no longer 
-work on certified Android devices after that time.
-```
-
-<pre>Send a coffee to 
-woheller69@t-online.de 
-<a href= "https://www.paypal.com/signin"><img  align="left" src="https://www.paypalobjects.com/webstatic/de_DE/i/de-pp-logo-150px.png"></a>
-
-  
-Or via this link (with fees)
-<a href="https://www.paypal.com/donate?hosted_button_id=XVXQ54LBLZ4AA"><img  align="left" src="https://img.shields.io/badge/Donate%20with%20Debit%20or%20Credit%20Card-002991?style=plastic"></a></pre>
-
-
-| **RadarWeather** | **Gas Prices** | **Smart Eggtimer** |
-|:---:|:---:|:---:|
-| [<img src="https://github.com/woheller69/weather/blob/main/fastlane/metadata/android/en-US/images/icon.png" width="50">](https://f-droid.org/packages/org.woheller69.weather/) | [<img src="https://github.com/woheller69/spritpreise/blob/main/fastlane/metadata/android/en-US/images/icon.png" width="50">](https://f-droid.org/packages/org.woheller69.spritpreise/) | [<img src="https://github.com/woheller69/eggtimer/blob/main/fastlane/metadata/android/en-US/images/icon.png" width="50">](https://f-droid.org/packages/org.woheller69.eggtimer/) |
-| **Bubble** | **hEARtest** | **GPS Cockpit** |
-| [<img src="https://github.com/woheller69/Level/blob/master/fastlane/metadata/android/en-US/images/icon.png" width="50">](https://f-droid.org/packages/org.woheller69.level/) | [<img src="https://github.com/woheller69/audiometry/blob/new/fastlane/metadata/android/en-US/images/icon.png" width="50">](https://f-droid.org/packages/org.woheller69.audiometry/) | [<img src="https://github.com/woheller69/gpscockpit/blob/master/fastlane/metadata/android/en-US/images/icon.png" width="50">](https://f-droid.org/packages/org.woheller69.gpscockpit/) |
-| **Audio Analyzer** | **LavSeeker** | **TimeLapseCam** |
-| [<img src="https://github.com/woheller69/audio-analyzer-for-android/blob/master/fastlane/metadata/android/en-US/images/icon.png" width="50">](https://f-droid.org/packages/org.woheller69.audio_analyzer_for_android/) |[<img src="https://github.com/woheller69/lavatories/blob/master/fastlane/metadata/android/en-US/images/icon.png" width="50">](https://f-droid.org/packages/org.woheller69.lavatories/) | [<img src="https://github.com/woheller69/TimeLapseCamera/blob/master/fastlane/metadata/android/en-US/images/icon.png" width="50">](https://f-droid.org/packages/org.woheller69.TimeLapseCam/) |
-| **Arity** | **Cirrus** | **solXpect** |
-| [<img src="https://github.com/woheller69/arity/blob/master/fastlane/metadata/android/en-US/images/icon.png" width="50">](https://f-droid.org/packages/org.woheller69.arity/) | [<img src="https://github.com/woheller69/omweather/blob/master/fastlane/metadata/android/en-US/images/icon.png" width="50">](https://f-droid.org/packages/org.woheller69.omweather/) | [<img src="https://github.com/woheller69/solXpect/blob/main/fastlane/metadata/android/en-US/images/icon.png" width="50">](https://f-droid.org/packages/org.woheller69.solxpect/) |
-| **gptAssist** | **dumpSeeker** | **huggingAssist** |
-| [<img src="https://github.com/woheller69/gptassist/blob/master/fastlane/metadata/android/en-US/images/icon.png" width="50">](https://f-droid.org/packages/org.woheller69.gptassist/) | [<img src="https://github.com/woheller69/dumpseeker/blob/main/fastlane/metadata/android/en-US/images/icon.png" width="50">](https://f-droid.org/packages/org.woheller69.dumpseeker/) | [<img src="https://github.com/woheller69/huggingassist/blob/master/fastlane/metadata/android/en-US/images/icon.png" width="50">](https://f-droid.org/packages/org.woheller69.hugassist/) |
-| **FREE Browser** | **whoBIRD** | **PeakOrama** |
-| [<img src="https://github.com/woheller69/browser/blob/newmaster/fastlane/metadata/android/en-US/images/icon.png" width="50">](https://f-droid.org/packages/org.woheller69.browser/) | [<img src="https://github.com/woheller69/whoBIRD/blob/master/fastlane/metadata/android/en-US/images/icon.png" width="50">](https://f-droid.org/packages/org.woheller69.whobird/) | [<img src="https://github.com/woheller69/PeakOrama/blob/master/fastlane/metadata/android/en-US/images/icon.png" width="50">](https://f-droid.org/packages/org.woheller69.PeakOrama/) |
-| **Whisper** | **Seamless** | |
-| [<img src="https://github.com/woheller69/whisperIME/blob/master/fastlane/metadata/android/en-US/images/icon.png" width="50">](https://f-droid.org/packages/org.woheller69.whisper/) | [<img src="https://github.com/woheller69/seamless/blob/master/fastlane/metadata/android/en-US/images/icon.png" width="50">](https://f-droid.org/packages/org.woheller69.seemless/) | |
-
 # Audio Spectrum Analyzer for Android
 
->  A fork of [Audio spectrum Analyzer for Android](https://code.google.com/p/audio-analyzer-for-android/) (See README.old for its original readme)
+A real-time audio spectrum analyzer and scrolling waterfall (spectrogram) for Android.
+Tune an instrument, look at a voice, find the hum in a room, or watch what a
+microphone actually hears.
 
-  This software shows the frequency components' magnitude distribution (called spectrum) of the sound heard by your cell phone. Can be used to help tuning musical instrument or tone in singing, (tentative) measure environmental noise and sound revent education or experiments.
+<img src="docs/screenshots/both.jpg" width="250"/> <img src="docs/screenshots/waterfall.jpg" width="250"/> <img src="docs/screenshots/fft-picker.jpg" width="250"/>
 
-  <img src="fastlane/metadata/android/en-US/images/phoneScreenshots/01.png" width="150"/> <img src="fastlane/metadata/android/en-US/images/phoneScreenshots/02.png" width="150"/> 
+This is a fork of [woheller69/audio-analyzer-for-android](https://github.com/woheller69/audio-analyzer-for-android).
+It keeps the analysis engine and rebuilds the display: the waterfall scrolls
+smoothly at the screen's refresh rate, the most-used analysis options are on the
+main screen, and the waterfall can fill the whole screen.
 
-  <a href="https://f-droid.org/packages/org.woheller69.audio_analyzer_for_android"><img alt="Get it on F-Droid" src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png" height="100"></a>
+## Upstream
 
+The published app, its F-Droid package, releases and translations belong to
+[woheller69's repository](https://github.com/woheller69/audio-analyzer-for-android).
+Go there for installable builds, to support his work, and to read his note on
+Google's 2026/2027 developer-verification requirement.
 
 ## Features
 
-* Show [spectrum](http://en.wikipedia.org/wiki/Frequency_spectrum) or [spectrogram](http://en.wikipedia.org/wiki/Spectrogram) in real-time, with decent axis labels.
-* Linear, Logarithm and (Musical) Note frequency axis support.
-* You can put a cursor in the plot, for measurement or as a marker.
-* Easy gestures to fine exam the spectrum: i.e. pinch for scaling and swipe for  view move.
-* Show peak frequency in a moderate accuracy (FFT + interpolation).
-* Show dB or [A-weighting dB (dBA)](http://en.wikipedia.org/wiki/A-weighting), although not suitable for serious application.
-* Possible to take averages of several spectrum then plot, make the spectrum smoother.
-* You may record the sound (while analyzing!) to a WAV file (PCM format). Then you can deal with it with your favorite tool.
-* Support all recorder sources except those need root privilege (see list in Android reference: [MediaRecorder.AudioSource](http://developer.android.com/reference/android/media/MediaRecorder.AudioSource.html))
-* Support all possible sampling rates that your phone is capable. e.g. useful to find out the native (or best) sampling format for you phone.
-* Load calibration files for microphones, see [Example](https://github.com/woheller69/audio-analyzer-for-android/blob/master/example_calibration.txt) 
+* **Three views:** spectrum only, spectrum over waterfall, or waterfall only.
+  In the combined view, drag the divider to share the height between them.
+* **Smooth waterfall:** a new row every ~21 ms by default and 30 s of history,
+  drawn on every screen refresh with sub-pixel scrolling.
+* **Analysis options on the main screen,** each showing what it costs you:
+  FFT size (frequency resolution and window length), overlap (time per row),
+  waterfall color range (with Auto), frequency scale, sample rate, window
+  function, averaging, history length, palette, dB/dBA weighting, and cursor.
+* **Frequency axis:** linear, logarithmic, or labelled by musical note.
+* **Cursor:** long-press a plot to place a cursor across both plots, or set
+  its frequency exactly from the Cursor button.
+* **Gestures:** pinch to zoom, drag to pan, double-tap to reset. Frequency
+  zoom is shared by the spectrum and the waterfall.
+* **Peak readout:** peak frequency with interpolation, as Hz and as a note.
+* **[A-weighting](https://en.wikipedia.org/wiki/A-weighting)** (dBA),
+  although not suitable for serious measurement.
+* **Averaging** of several spectra for a smoother plot.
+* **Record to WAV** (PCM) while analyzing.
+* **Every recorder source** that doesn't need root
+  ([MediaRecorder.AudioSource](https://developer.android.com/reference/android/media/MediaRecorder.AudioSource)),
+  and every sample rate the phone supports.
+* **Microphone calibration files,** see the
+  [example](example_calibration.txt).
+* **Test sources:** two sine signals, white noise, and a repeating
+  50 Hz – 15 kHz sweep, selectable under Preferences → Audio source.
+
+## Building
+
+Requires the Android SDK (platform 35) and JDK 17. The Gradle wrapper
+(8.6) does not run on newer JDKs.
+
+```
+echo "sdk.dir=$HOME/Android/Sdk" > local.properties
+JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64 ./gradlew assembleDebug
+adb install audioSpectrumAnalyzer/build/outputs/apk/debug/audioSpectrumAnalyzer-debug.apk
+```
+
+The app ID is `org.xeyes.aa4a`, so it installs alongside the upstream app
+rather than replacing it. Debug builds add a `.dev` suffix, so a debug build
+and a release build can be installed at the same time.
 
 ## Permissions
 
 * Microphone, of course.
-* External storage (e.g MicroSD card), if you want to record the sound.
+* External storage, only if you want to record to WAV.
 
 ## Privacy
 
-### Information we collect and you share
+### Information collected and shared
 
-This app does not send any personal or non-personal information in any form over network. 
+This app does not send any personal or non-personal information in any form
+over the network.
 
-Only with user's permission and explicit order, this app can store microphone data on the user's device.
+Only with the user's permission and explicit request can this app store
+microphone data on the user's device.
 
 ### Data processing
 
-The permission to read microphone is required because that is the essential data this app needs to compute and display the spectrum and spectrogram.
+The microphone permission is required because microphone data is what the app
+analyzes to compute and display the spectrum and waterfall.
 
-The permission to read and write storage is for saving microphone data (in WAV PCM format) only and is optional. 
-This is provided for convenience of user (e.g. user might want to use another app to process the recorded data). It is user's responsibility to remove the recorded data if they are no longer needed.
-
-
-## License
-
-This software, [Audio Spectrum Analyzer for Android](https://github.com/woheller69/audio-analyzer-for-android), is released under the Apache License, Version 2.0.
-
-Copyright [thinkingcow](https://github.com/thinkingcow), [bewantbe](https://github.com/bewantbe), [woheller69](https://github.com/woheller69)
-
+The storage permission is optional and used only to save microphone data as WAV
+(PCM) files, for processing in another app. Removing recordings that are no
+longer needed is up to the user.
 
 ## Code structure
 
-The whole program structure is roughly follows the MVC model: 
+* `AnalyzerActivity`: the controller. Lifecycle, permissions, touch gestures,
+  and one setter per analysis option, each of which stores the preference
+  and restarts sampling if it has to.
+* `ControlBar`: the row of option buttons and their pickers.
+* `AnalyzerViews`: the text readouts (peak, cursor, RMS, resolution,
+  recording time) and notifications.
+* `AnalyzerGraphic`: the plot view. It lays out `SpectrumPlot` and
+  `WaterfallPlot` for the current view mode and keeps their frequency axes
+  in step.
+* `WaterfallPlot`: history as a ring buffer of dB rows, colorized into a ring
+  of 64-row bitmap tiles so a new row re-uploads one small tile. A display
+  clock runs at the nominal row rate and locks onto actual row arrival, which
+  makes scrolling smooth between rows. Zooming stretches the tiles, and they
+  are re-rendered once the view has been still for a moment.
+* `SamplingLoop` and `STFT`: the model. Sampling, windowed FFT, averaging,
+  peak and RMS.
 
-_AnalyzerActivity.java_ is the controler, as the main activity, it receives user inputs and system events, then sent corresponding commands to views or sampling and analyzing procedures.
+### Processing of audio samples
 
-_AnalyzerViews.java_ is the view in MVC. It is used to manage (initialization, display, refresh) UI texts, buttons, dialogs and graphics.
-_AnalyzerGraphic.java_ is a main sub-view which manage display of spectrum(_SpectrumPlot.java_) and spectrogram(_SpectrogramPlot.java_).
-
-_SamplingLoop.java_ is more or less the "model" part. It performs the sampling and FFT analysis, and inform the graphics update.
-
-
-#### Processing of audio samples
-The data process loop is located in `run()` in _SamplingLoop.java_ (after commit c9e430b (Feb 06, 2017), but basicly this process didn't change since the initial commit), as well as the trigger of graphics refresh.
-
-In every loop of `while (isRunning)`, it reads a chunk of audio samples by
+The processing loop is `run()` in `SamplingLoop.java`. Each pass of
+`while (isRunning)` reads a chunk of samples:
 
     record.read(audioSamples, 0, readChunkSize);
 
-, then "stream" it to `STFT.java` by
+and streams it into `STFT.java`:
 
     stft.feedData(audioSamples, numOfReadShort);
 
-which calculates RMS and FFT whenever enough data is collected. The view is then informed through
+which computes RMS and an FFT whenever enough samples have arrived. Each new
+spectrum is handed to the views with
 
     activity.analyzerViews.update(spectrumDBcopy);
 
-which ultimately calls `invalidate()` of the graphic view to request an update, then the `AnalyzerGraphic.onDraw(Canvas c)` will be called automatically.
+which stores it for the spectrum plot, appends it to the waterfall history, and
+requests a redraw. While the waterfall is visible it also redraws itself on
+every frame, so it keeps scrolling between spectra.
 
+## Lineage and acknowledgements
 
-## Contribute
+This app is the latest branch of a long line of work, and most of what it does
+was inherited.
 
-For translations use https://toolate.othing.xyz/projects/audio-spectrum-analyzer/
+### Direct lineage
+
+* **Stephen Uhler ([thinkingcow](https://github.com/thinkingcow))** at Google,
+  2011–2012, wrote the original *Audio Spectrum Analyzer for Android* as an
+  experiment with the Android SDK and published it on Google Code (see
+  [README.old](README.old)). His sine generator, selector widget and FFT
+  wrapper are still here.
+* **Eddy Xiao ([bewantbe](https://github.com/bewantbe))**, 2014–2017, turned it
+  into a real analyzer: the STFT engine, the spectrogram, gesture zooming,
+  window functions, colormaps, calibration and most of the architecture.
+* **[woheller69](https://github.com/woheller69) (Wolfgang Heller)** has
+  maintained it since, published it on F-Droid, kept it building on modern
+  Android, and extended it. This fork starts from his version 3.2.
+* **Contributors along the way:** nfsmaster208, Steven Schoen,
+  Hans-Joachim Zimmer, kennyzzhang, Yurt Page, Izzy (fastlane metadata),
+  james34602 (additional window functions), and the translators on Toolate.
+
+### Code this app stands on
+
+* **FFT:** FFTPACK by Paul N. Swarztrauber (NCAR, public domain), ported to C
+  by Pekka Janhunen, to Java (jfftpack) by Baoshe Zhang at the University of
+  Lethbridge, and adapted for Android by Stephen Uhler.
+* **Kaiser window Bessel function:** from CERN's Colt library.
+* **Colormaps:** viridis, magma, inferno and plasma from matplotlib, by
+  Stéfan van der Walt and Nathaniel Smith (CC0). Parula is modeled on
+  MATLAB's default colormap. The black-body map was made perceptually uniform
+  with bewantbe's
+  [colormap_uniformize](https://github.com/bewantbe/colormap_uniformize).
+
+### This fork
+
+The scrolling waterfall, the Spectrum / Both / Waterfall views and the on-screen
+analysis controls were written by
+[laplaces-agent](https://github.com/laplaces-agent), an LLM agent.
+[Spectroid](https://play.google.com/store/apps/details?id=org.intoorbit.spectrum)
+set the bar for how a waterfall should feel. It was watched and timed, not read.
+
+### The developers in the training data
+
+An LLM can write this code only because people wrote code first. Before
+laplaces-agent wrote a line of this fork, the model behind it was trained on an
+enormous body of human work: source code, documentation, tutorials, answers to
+strangers' questions, bug reports, code reviews and mailing-list arguments. That
+work was written over decades by more people than can ever be counted, and few
+of them were asked. Many shared it freely and would be glad to see it go
+further. Some would not have agreed to this use if anyone had asked. Most were
+never given the chance to say.
+
+Their names aren't here, and they can't be, because training doesn't record who
+taught the model what. So they are thanked here as a whole: every developer who
+wrote something down so the next person wouldn't have to work it out again. The
+ring buffer, the frame-synced render loop and the popup list with its checkmark
+didn't originate with laplaces-agent. They came from you.
+
+Nothing in this fork was knowingly copied from a particular source. That doesn't
+settle the debt; it only describes it. The least that code written this way can
+do is go back where it came from, so this fork is released under the same free
+license as the work it builds on, for anyone to read, change and share. If some
+of your work is in it, it is still yours as well.
+
+## License
+
+Released under the Apache License, Version 2.0. The full text is in
+[LICENSE](LICENSE).
+
+Copyright [thinkingcow](https://github.com/thinkingcow) (Stephen Uhler),
+[bewantbe](https://github.com/bewantbe),
+[woheller69](https://github.com/woheller69),
+[laplaces-agent](https://github.com/laplaces-agent).

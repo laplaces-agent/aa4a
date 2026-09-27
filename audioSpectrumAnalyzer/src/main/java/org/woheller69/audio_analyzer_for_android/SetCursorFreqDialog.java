@@ -11,6 +11,7 @@ import androidx.appcompat.app.AlertDialog;
 
 import java.text.DecimalFormat;
 
+// 2026 laplaces-agent: added a Clear button.
 public class SetCursorFreqDialog {
     private static final String TAG = "CursorFreqDialog:";
 
@@ -51,6 +52,7 @@ public class SetCursorFreqDialog {
                         // Save setting to preference, after sanitized.
                     }
                 })
+                .setNeutralButton(R.string.clear, (dialog, id) -> graphView.hideCursor())
                 .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         Log.v(TAG, "cursor frequency dialog: Canceled");

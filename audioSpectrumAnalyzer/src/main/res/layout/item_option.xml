@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:minHeight="44dp"
+    android:orientation="horizontal"
+    android:paddingLeft="10dp"
+    android:paddingRight="14dp">
+
+    <ImageView
+        android:id="@+id/option_check"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_check" />
+
+    <TextView
+        android:id="@+id/option_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/text_primary"
+        android:textSize="16sp" />
+
+    <View
+        android:id="@+id/option_swatch"
+        android:layout_width="56dp"
+        android:layout_height="12dp"
+        android:layout_marginLeft="12dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/option_hint"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_weight="1"
+        android:gravity="end"
+        android:textColor="@color/text_secondary"
+        android:textSize="12sp" />
+</LinearLayout>

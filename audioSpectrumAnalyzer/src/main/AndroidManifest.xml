@@ -20,6 +20,7 @@
         android:theme="@style/DarkThemeSelector" >
         <activity
             android:name="org.woheller69.audio_analyzer_for_android.AnalyzerActivity"
+            android:theme="@style/AnalyzerTheme"
             android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
             android:exported="true">
             <intent-filter>

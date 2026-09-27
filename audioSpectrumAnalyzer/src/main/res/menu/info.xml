@@ -6,14 +6,14 @@
         android:id="@+id/fullscreen"
         android:enabled="true"
         android:icon="@drawable/ic_fullscreen_24dp"
-        android:title="Fullscreen"
+        android:title="@string/menu_fullscreen"
         app:showAsAction="always"/>
 
     <item
         android:id="@+id/screenshot"
         android:enabled="true"
         android:icon="@drawable/ic_screenshot"
-        android:title="Screenshot"
+        android:title="@string/menu_screenshot"
         app:showAsAction="always"/>
     <item
         android:id="@+id/menu_manual"
@@ -68,7 +68,6 @@
         android:id="@+id/menu_github"
         android:enabled="true"
         android:icon="@android:drawable/ic_menu_manage"
-        android:onClick="openGithub"
         android:menuCategory="container"
         android:title="@string/about"
         android:titleCondensed="calib"/>

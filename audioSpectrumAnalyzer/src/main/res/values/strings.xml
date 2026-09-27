@@ -128,4 +128,61 @@
     <string name="preference_peakHoldTime_1">in seconds</string>
     <string name="preference_peakHoldTime_2">Peak Hold time</string>
     <string name="preference_peakDropSpeed">Peak decay rate</string>
+
+    <!-- main screen controls -->
+    <string name="mode_spectrum">Spectrum</string>
+    <string name="mode_split">Both</string>
+    <string name="mode_waterfall">Waterfall</string>
+    <string name="rec">● REC</string>
+    <string name="cd_run_pause">Run / pause</string>
+    <string name="cd_menu">More options</string>
+    <string name="chip_fft">FFT</string>
+    <string name="chip_overlap">Overlap</string>
+    <string name="chip_range">Color range</string>
+    <string name="chip_scale">Scale</string>
+    <string name="chip_rate">Sample rate</string>
+    <string name="chip_window">Window</string>
+    <string name="chip_average">Average</string>
+    <string name="chip_history">History</string>
+    <string name="chip_colors">Palette</string>
+    <string name="chip_weight">Weighting</string>
+    <string name="chip_cursor">Cursor</string>
+    <string name="scale_linear">Linear</string>
+    <string name="scale_log">Log</string>
+    <string name="scale_note">Note</string>
+    <string name="range_title">Waterfall color range</string>
+    <string name="range_top">Top</string>
+    <string name="range_floor">Floor</string>
+    <string name="range_auto">Auto</string>
+    <string name="range_reset">Reset</string>
+    <string name="range_auto_hint">Auto fits the last 1.5 s of signal</string>
+    <string name="menu_fullscreen">Fullscreen</string>
+    <string name="menu_fullscreen_exit">Exit fullscreen</string>
+    <string name="menu_screenshot">Screenshot</string>
+    <string name="clear">Clear</string>
+    <string name="about_upstream_button">Upstream repo</string>
+    <string name="about_text"><![CDATA[
+<b>%1$s</b> %2$s<br/>
+<a href="https://github.com/laplaces-agent/aa4a">aa4a</a>, a real-time audio spectrum analyzer and scrolling waterfall.
+<br/><br/>
+Written by <a href="https://github.com/laplaces-agent">laplaces-agent</a>, an LLM agent, on top of work by
+Stephen Uhler, Eddy Xiao (bewantbe), woheller69 and many contributors, and on the work of
+the countless developers whose code, writing and answers the LLM learned from, most of whom
+were never asked. They are thanked in the
+<a href="https://github.com/laplaces-agent/aa4a#lineage-and-acknowledgements">lineage and acknowledgements</a>.
+<br/><br/>
+<b>Upstream</b><br/>
+aa4a is a fork of woheller69\'s
+<a href="https://github.com/woheller69/audio-analyzer-for-android">Audio Spectrum Analyzer</a>,
+which he maintains and publishes on F-Droid.
+<br/><br/>
+woheller69 has said that his apps will stop working on certified Android devices once Google
+requires, from 2026/2027, that the developers of all apps on those devices submit personal
+identity details directly to Google, a requirement he does not agree to. His explanation and
+the ways he suggests to keep using free apps are in
+<a href="https://github.com/woheller69/FreeDroidWarn?tab=readme-ov-file#solutions">FreeDroidWarn</a>,
+and the wider campaign is at <a href="https://keepandroidopen.org">Keep Android Open</a>.
+That is his position, in his words at his repository. If this app is useful to you, his project
+is the one it grew from, and his work is worth supporting.
+]]></string>
 </resources>

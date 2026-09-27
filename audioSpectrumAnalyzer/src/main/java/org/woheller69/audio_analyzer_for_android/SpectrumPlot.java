@@ -11,6 +11,9 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
+ *
+ * 2026 laplaces-agent
+ * Drawn inside a sub-region of AnalyzerGraphic.
  */
 
 package org.woheller69.audio_analyzer_for_android;
@@ -131,8 +134,6 @@ class SpectrumPlot {
         if (canvasHeight < 1 || _db == null || _db.length == 0) {
             return;
         }
-        AnalyzerGraphic.setIsBusy(true);
-
         synchronized (_db) {  // TODO: need lock on savedDBSpectrum, but how?
             if (db_cache == null || db_cache.length != _db.length) {
                 Log.d(TAG, "drawSpectrumOnCanvas(): new db_cache");
@@ -160,7 +161,6 @@ class SpectrumPlot {
         }
         plot2D.plotLineBar(c, y_calib, x_calib, false, calibLinePaint, null);
 
-        AnalyzerGraphic.setIsBusy(false);
     }
 
     // x, y is in pixel unit

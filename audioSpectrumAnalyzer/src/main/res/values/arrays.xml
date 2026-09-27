@@ -33,13 +33,16 @@
         <item>-120</item>
         <item>-150</item>
     </string-array>
-    <string name="spectrogram_duration_default" translatable="false">6.0</string>
+    <string name="spectrogram_duration_default" translatable="false">30.0</string>
     <string-array name="spectrogram_duration_array" translatable="false">
-        <item>2.0</item>
-        <item>4.0</item>
-        <item>6.0</item>
-        <item>8.0</item>
+        <item>5.0</item>
         <item>10.0</item>
+        <item>15.0</item>
+        <item>20.0</item>
+        <item>30.0</item>
+        <item>45.0</item>
+        <item>60.0</item>
+        <item>120.0</item>
     </string-array>
     <string name="spectrogram_fps_default" translatable="false">8</string>
     <string-array name="spectrogram_fps_array" translatable="false">
@@ -98,7 +101,7 @@
         <item>87.5</item>
         <item>93.75</item>
     </string-array>
-    <string name="fft_overlap_percent_default" translatable="false">50.0</string>
+    <string name="fft_overlap_percent_default" translatable="false">75.0</string>
     <string-array name="audio_source" translatable="false">
         <item>VOICE_RECOGNITION</item>
         <item>DEFAULT</item>
@@ -110,6 +113,7 @@
         <item>test signal 1\n\t 440Hz @ -6dB</item>
         <item>test signal 2\n\t 625Hz @ -6dB\n +1875Hz @ -12dB</item>
         <item>white noise</item>
+        <item>test sweep\n\t 50Hz – 15kHz, 5 s</item>
     </string-array>
     <string-array name="audio_source_id" translatable="false">
         <item>6</item>
@@ -122,6 +126,7 @@
         <item>1000</item>
         <item>1001</item>
         <item>1002</item>
+        <item>1003</item>
     </string-array>
     <string name="audio_source_id_default" translatable="false">6</string>
     <string-array name="sample_rates" translatable="false">

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="panel_bg">#FF0E1013</color>
+    <color name="chip_bg">#FF1A1D21</color>
+    <color name="chip_bg_pressed">#FF2A2F35</color>
+    <color name="chip_stroke">#FF2B3036</color>
+    <color name="text_primary">#FFECEFF1</color>
+    <color name="text_secondary">#FF8C959F</color>
+    <color name="accent">#FF4FC3F7</color>
+    <color name="accent_pressed">#FF29A5DB</color>
+    <color name="accent_dim">#334FC3F7</color>
+    <color name="rec_red">#FFFF5252</color>
+    <color name="rec_red_dim">#33FF5252</color>
+</resources>

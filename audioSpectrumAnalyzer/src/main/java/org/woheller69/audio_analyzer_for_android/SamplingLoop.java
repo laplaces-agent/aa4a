@@ -11,6 +11,9 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
+ *
+ * 2026 laplaces-agent
+ * Pause state read from the activity; repeating sweep test source.
  */
 
 package org.woheller69.audio_analyzer_for_android;
@@ -62,7 +65,7 @@ class SamplingLoop extends Thread {
         activity = _activity;
         analyzerParam = _analyzerParam;
 
-        isPaused1 = ((SelectorText) activity.findViewById(R.id.run)).getValue().equals("stop");
+        isPaused1 = activity.isPaused;
         // Signal sources for testing
         double fq0 = Double.parseDouble(activity.getString(R.string.test_signal_1_freq1));
         double amp0 = Math.pow(10, 1 / 20.0 * Double.parseDouble(activity.getString(R.string.test_signal_1_db1)));
@@ -107,6 +110,8 @@ class SamplingLoop extends Thread {
     }
 
     private double[] mdata;
+    private long sweepSample = 0;
+    private double sweepPhase = 0;
 
     // Generate test data.
     private int readTestData(short[] a, int offsetInShorts, int sizeInShorts, int id) {
@@ -127,6 +132,18 @@ class SamplingLoop extends Thread {
             case 2:
                 for (int i = 0; i < sizeInShorts; i++) {
                     a[i] = (short) (analyzerParam.SAMPLE_VALUE_MAX * (2.0 * Math.random() - 1));
+                }
+                break;
+            case 3:
+                // Exponential sweep, repeating, over a faint noise floor
+                double f0 = 50, f1 = Math.min(15000, 0.45 * analyzerParam.sampleRate), period = 5.0;
+                for (int i = 0; i < sizeInShorts; i++) {
+                    double t = (sweepSample++ % (long) (period * analyzerParam.sampleRate)) / (double) analyzerParam.sampleRate;
+                    double f = f0 * Math.pow(f1 / f0, t / period);
+                    sweepPhase += 2 * Math.PI * f / analyzerParam.sampleRate;
+                    if (sweepPhase > 2 * Math.PI) sweepPhase -= 2 * Math.PI;
+                    a[offsetInShorts + i] = (short) (analyzerParam.SAMPLE_VALUE_MAX
+                            * (0.5 * Math.sin(sweepPhase) + 1e-4 * (2.0 * Math.random() - 1)));
                 }
                 break;
             default:

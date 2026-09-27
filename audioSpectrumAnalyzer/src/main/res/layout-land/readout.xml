@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/data_bar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingLeft="10dp"
+    android:paddingTop="3dp"
+    android:paddingRight="10dp">
+
+    <TextView
+        android:id="@+id/textview_peak"
+        style="@style/Readout"
+        android:textColor="@color/text_primary" />
+
+    <TextView
+        android:id="@+id/textview_cur"
+        style="@style/Readout"
+        android:layout_marginLeft="24dp"
+        android:textColor="#FF00CD00" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/textview_res"
+        style="@style/Readout" />
+
+    <TextView
+        android:id="@+id/textview_RMS"
+        style="@style/Readout"
+        android:layout_marginLeft="24dp"
+        android:textColor="@color/text_primary" />
+</LinearLayout>
